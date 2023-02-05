@@ -13,7 +13,7 @@ open localhost port 3000
 clone this repository
 ### 2. `npm install`
 Install all node package on package.json
-### 3. `npm install -g server`
+### 3. `npm install -g serve`
 Adding Node module server globally
 ### 4. `npm build`
 build to file build/
