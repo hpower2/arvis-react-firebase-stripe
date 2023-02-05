@@ -1,12 +1,43 @@
-## How to run this project on local
+# How to run this project on local
 RUN This 4 Command
 ### 1. `git clone https://github.com/hpower2/arvis-react-firebase-stripe.git`
+clone this repository
 ### 2. `npm install`
+Install all node package on package.json
 ### 3. `npm start`
+start server locally
 ### 4. Open Port : [http://localhost:3000](http://localhost:3000)
+open localhost port 3000
 
+# How to build this project on local
+### 1. `git clone https://github.com/hpower2/arvis-react-firebase-stripe.git`
+clone this repository
+### 2. `npm install`
+Install all node package on package.json
+### 3. `npm install -g server`
+Adding Node module server globally
+### 4. `npm build`
+build to file build/
+### 5. `serve -g build/`
+serve on static server (serve)
 
-## React
+# How to use mock Stripe Api
+### 1. Add cart
+Add Item to cart.
+### 2. Checkout
+Process to Checkout
+### 3. Pay from checkout
+Process to payment
+### 4. Input Card Detail (Mock)
+Email : Any email<br />
+Card Information : 4242 4242 4242 4242<br />
+MM/YY : Any valid years <br />
+CVC : Any 3 valid digit <br />
+Name : Anything<br />
+### 5. Pay
+Press pay.<br />
+
+# React
 
 This project was bootstrapped with
 [Create React App](https://github.com/facebook/create-react-app).
