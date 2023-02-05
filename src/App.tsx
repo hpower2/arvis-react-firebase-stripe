@@ -1,38 +1,31 @@
-import * as React from "react"
-import {
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
-} from "@chakra-ui/react"
-import { ColorModeSwitcher } from "./ColorModeSwitcher"
-import { Logo } from "./Logo"
+import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Shop } from "./pages/shop";
+import { Cart } from "./pages/checkout";
+import { Detail } from "./pages/detail";
+import { Login } from "./pages/login";
+import { initializeApp } from "firebase/app";
+import { config } from "./firebase/config";
+import { NewTheme } from "./theme";
+import { CartProvider } from "react-use-cart";
+import { Navigate } from "react-router-dom";
+
+
+initializeApp(config.firebaseConfig);
 
 export const App = () => (
-  <ChakraProvider theme={theme}>
-    <Box textAlign="center" fontSize="xl">
-      <Grid minH="100vh" p={3}>
-        <ColorModeSwitcher justifySelf="flex-end" />
-        <VStack spacing={8}>
-          <Logo h="40vmin" pointerEvents="none" />
-          <Text>
-            Edit <Code fontSize="xl">src/App.tsx</Code> and save to reload.
-          </Text>
-          <Link
-            color="teal.500"
-            href="https://chakra-ui.com"
-            fontSize="2xl"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn Chakra
-          </Link>
-        </VStack>
-      </Grid>
-    </Box>
+  <ChakraProvider theme={NewTheme}>
+    <BrowserRouter>
+      <ColorModeScript initialColorMode={NewTheme.config.initialColorMode} />
+      <CartProvider>
+        <Routes>
+          <Route index path="" element={<Navigate to={"/shop"}/>} />
+          <Route path="shop" element={<Shop />} />
+          <Route path="/shop/:id" element={<Detail />} />
+          <Route path="/shop/checkout" element={<Cart />} />
+          <Route path="login" element={<Login />} />
+        </Routes>
+      </CartProvider>
+    </BrowserRouter>
   </ChakraProvider>
-)
+);
