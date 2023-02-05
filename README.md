@@ -20,6 +20,14 @@ build to file build/
 ### 5. `serve -g build/`
 serve on static server (serve)
 
+# How to login with firebase
+## Dengan Email dan Password
+### 1. `Pakai Email : mock@arvis.id`
+### 2. `Password : MockArvisId`
+## Dengan Gmail
+### 1. `Klik Logo Gmail`
+### 2. `Login dengan Gmail seperti biasa`
+
 # How to use mock Stripe Api
 ### 1. Add cart
 Add Item to cart.
