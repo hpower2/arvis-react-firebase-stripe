@@ -1,3 +1,13 @@
+## How to run this project on local
+RUN This 4 Command
+### 1. `git clone https://github.com/hpower2/arvis-react-firebase-stripe.git`
+### 2. `npm install`
+### 3. `npm start`
+### 4. Open Port : [http://localhost:3000](http://localhost:3000)
+
+
+## React
+
 This project was bootstrapped with
 [Create React App](https://github.com/facebook/create-react-app).
 
